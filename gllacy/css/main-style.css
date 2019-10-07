@@ -25,9 +25,14 @@ img {
 
 .button-back {
   position: fixed;
-  display: block;
   color: aqua;
-  background-color: rgb(128, 9, 9);
+  background-color: rgb(128, 9, 9, .5);
+  cursor: pointer;
+  z-index: 1000;
+  bottom: 50%;
+  text-decoration: none;
+  padding: 55px 25px;
+  border-radius: 50%;
 }
 
 .removes-list-points,
