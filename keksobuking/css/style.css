@@ -1248,3 +1248,16 @@ fieldset {
   outline: none;
   opacity: 0.6;
 }
+
+.button-back {
+  position: fixed;
+  color: aqua;
+  background-color: rgb(128, 9, 9, .5);
+  cursor: pointer;
+  z-index: 1000;
+  bottom: 50%;
+  text-decoration: none;
+  padding: 55px 25px;
+  border-radius: 50%;
+}
+
