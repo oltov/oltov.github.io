@@ -46,7 +46,7 @@ li {
 .website-paragraph {
   text-align: center;
   font-size: 15px;
-  background-color: khaki;
+  /* background-color: khaki; */
   border-radius: 5px;
   min-height: 100px;
 }
@@ -73,6 +73,34 @@ li {
   display: block;
   width: 250px;
   height: 250px;
+}
+
+.social {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  /* width: 60px; */
+}
+
+.social-item {
+  width: auto;
+  margin-right: 10px;
+}
+
+.social-link {
+  display: block;
+  width: 30px;
+  height: 30px;
+  background: url("../img/github.svg") no-repeat center;
+}
+
+.mail {
+  background: url("../img/mail.svg") no-repeat;
+}
+
+.telegram {
+  background: url("../img/telegram.svg") no-repeat center;
 }
 
 @media (min-width: 660px) {
