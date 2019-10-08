@@ -1,0 +1,74 @@
+li {
+  list-style: none;
+  width: 250px;
+}
+
+.body {
+  margin: 0;
+  padding: 0;
+  background-color: #efefef;
+  font-family: "Roboto Mono", sans-serif;
+}
+.header {
+  font-size:30px;
+  padding:0;
+  text-align:center;
+}
+
+.main-title {
+  margin: 0;
+  padding: 100px 20px;
+  font-size: 40px;
+}
+
+.title {
+  margin: 0;
+  padding: 0;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.container {
+  width:1200px;
+  margin:0 auto;
+}
+
+.website-list {
+  margin: 0;
+  padding: 0;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.website-paragraph {
+  text-align: center;
+  font-size: 15px;
+  background-color: khaki;
+  border-radius: 5px;
+  min-height: 100px;
+}
+
+.img {
+  border-radius: 50%;
+}
+
+.certificate {
+  margin: 0;
+  padding: 0;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+/* .certificate-item {
+  list-style: none;
+} */
+
+.certificate-link {
+  display: block;
+  width: 250px;
+  height: 250px;
+}

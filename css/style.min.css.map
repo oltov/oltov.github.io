@@ -1,1 +1,0 @@
-{"version":3,"sources":["blocks/main.scss","blocks/container.scss"],"names":[],"mappings":"AAAA,O,CACE,c,CACA,e,CACA,iB,CCHF,U,CACE,W,CACA,a","file":"style.min.css","sourcesContent":[".header {\n  font-size: 30px;\n  padding: 100px 0;\n  text-align: center;\n}\n",".container {\n  width: 900px;\n  margin: 0 auto;\n}\n"]}

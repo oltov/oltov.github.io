@@ -3,28 +3,79 @@
     <head>
       <meta charset="utf-8">
       <title>Портфолио Болтов Михаил</title>
-      <link href="css/style.min.css" rel="stylesheet">
-      <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic,cyrillic-ext" rel="stylesheet">
+      <link href="css/style.css" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap&subset=cyrillic,cyrillic-ext" rel="stylesheet">
     </head>
-    <body class="container">
-      <header>
-        <h1 class="container header">Портфолио Болтов Михаил</h1>
+    <body class="body">
+      <header class="header">
+        <div class="header-wrapper container">
+          <h1 class="main-title">БОЛТОВ МИХАИЛ</h1>
+        </div>
       </header>
-      <main>
-        <ul>
-          <li>
-            <a href="gllacy/index.html">gllacy</a>
+      <main class="container main">
+        <h2 class="title">работы</h2>
+        <ul class="website-list">
+          <li class="website-item">
+            <a href="gllacy/index.html">
+              <img class="img" src="img/gllacy.png">
+            </a>
+            <p class="website-paragraph">
+              Интернет-магазин мороженого
+              Фиксированная верстка Кроссбраузерность
+            </p>
           </li>
-          <li>
-            <a href="pink/index.html">pink</a>
+          <li class="website-item">
+            <a href="pink/index.html">
+              <img class="img" src="img/pink.png">
+            </a>
+            <p class="website-paragraph">
+              Сайт фотоприложения
+              Адаптивная верстка 330px/660px/960px Кроссбраузерность
+              Ретинизация БЭМ SASS Gulp
+            </p>
           </li>
-          <li>
-            <a href="keksobuking/index.html">keksobuking</a>
+          <li class="website-item">
+            <a href="keksobuking/index.html">
+              <img class="img" src="img/keksobooking.png">
+            </a>
+            <p class="website-paragraph">
+              Cервис размещения объявлений о сдаче в аренду недвижимости.
+              Реализация функционала сервиса. Нативный JavaScript
+            </p>
           </li>
-          <li>
-            <a href="wheels/index.html">wheels</a>
+          <li class="website-item">
+            <a href="wheels/index.html">
+              <img class="img" src="img/wheels.png">
+            </a>
+            <p class="website-paragraph">
+              Интернет-магазин велосипедов.
+              Фиксированная верстка. Кроссбраузерность.
+              БЭМ SASS Gulp
+            </p>
+          </li>
+        </ul>
+        <h2 class="title">сертификаты</h2>
+        <ul class="certificate">
+          <li class="certificate-item">
+            <a class="certificate-link" href="img/html_1.png"><img class="img" src="img/html_1_small-2.png"></a>
+            </li>
+          <li class="certificate-item">
+            <a class="certificate-link" href="img/html_2.png"><img class="img" src="img/html_2_small-2.png"></a>
+          </li>
+          <li class="certificate-item">
+            <a class="certificate-link" href="img/js_1.png"><img class="img" src="img/js_1_small-2.png"></a>
           </li>
         </ul>
       </main>
+      <footer class="container">
+        <ul class="social">
+          <li class="social-item">
+            <a href="https://github.com/oltov" class="social-link"></a>
+          </li>
+          <li class="social-item">
+            <a href="mailto:boltov.mihail@gmail.com" class="social-link"></a>
+          </li>
+        </ul>
+      </footer>
     </body>
 </html>
