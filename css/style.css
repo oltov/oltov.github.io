@@ -24,7 +24,7 @@ li {
 .title {
   margin: 0;
   padding: 0;
-  margin-top: 20px;
+  margin-top: 0;
   text-align: center;
 }
 
@@ -43,16 +43,46 @@ li {
   flex-wrap: wrap;
 }
 
+.website-link {
+  display: block;
+  height: 250px;
+}
+
+.website-item {
+  margin-bottom: 100px;}
+
+.website-item:hover {
+  position: relative;
+  z-index: 10;
+  border-radius: 5px 5px 0 0;
+  background-color: #2da59f3b;
+}
+
+.website-item:hover .website-paragraph {
+  display: block;
+  position: absolute;
+  z-index: 5;
+  width: 250px;
+  background-color: #2da59f3b;
+}
+
 .website-paragraph {
+  margin: 0;
+  padding: 0;
+  display: none;
   text-align: center;
   font-size: 15px;
-  /* background-color: khaki; */
-  border-radius: 5px;
+  border-radius: 0 0 5px 5px;
   min-height: 100px;
 }
 
 .img {
   border-radius: 50%;
+}
+
+.img-site {
+  border-radius: 50%;
+  border: 3px solid #ffffff00;
 }
 
 .certificate {
