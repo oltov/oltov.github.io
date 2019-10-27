@@ -40,7 +40,7 @@ li {
   margin-top: 20px;
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: center;
   flex-wrap: wrap;
 }
 
@@ -50,13 +50,15 @@ li {
 }
 
 .website-item {
-  margin-bottom: 100px;}
+  margin-bottom: 120px;
+  margin-right: 50px;
+  margin-left: 50px;
+}
 
 .website-item:hover {
   position: relative;
   z-index: 10;
   border-radius: 5px 5px 0 0;
-  /* background-color: #2da59f3b; */
 }
 
 .website-item:hover .website-paragraph {
@@ -64,7 +66,6 @@ li {
   position: absolute;
   z-index: 5;
   width: 250px;
-  /* background-color: #2da59f3b; */
 }
 
 .website-paragraph {
