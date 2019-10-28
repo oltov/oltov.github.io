@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body class="body">
+    <a href="../index.html" class="button-back">портфолио</a>
     <header class="header">
       <div class="header__wrapper container">
         <div class="header__nav-wrapper">
@@ -135,29 +136,46 @@
                 </li>
               </ul>
             </div>
-            <ul class="banner__photo-list">
-              <li class="banner__photo-item">
-                <picture class="banner__picture">
-                  <source type="image/webp" media="(min-width: 1170px)" srcset="img/banner-desktop.webp">
-                  <source type="image/webp" media="(min-width: 750px)" srcset="img/banner-tablet.webp">
-                  <source type="image/webp" srcset="img/banner-1.webp">
-                  <source media="(min-width: 1170px)" srcset="img/banner-desktop.jpg">
-                  <source media="(min-width: 750px)" srcset="img/banner-tablet.jpg">
-                  <img class="banner__photo" src="img/banner-1.jpg" srcset="img/banner-1.jpg" width="291" height="187" alt="баннер на улице Ленина">
-                </picture>
-                <p class="banner__address">Растяжка на ул. Ленина</p>
-              </li>
-              <li class="banner__photo-item">
-                <img class="banner__photo" src="img/banner-2.jpg" width="291" height="187" alt="банер на улице Строителей">
-                <p class="banner__address">Растяжка на ул. Строителей</p>
-              </li>
-              <li class="banner__photo-item">
-                <img class="banner__photo" src="img/banner-1.jpg" width="291" height="187" alt="банер на улице Надежды">
-                <p class="banner__address">Растяжка на ул. Надежды</p>
-              </li>
-            </ul>
-            <button class="banner__link" type="button"></button>
-            <button class="banner__link banner__link--right" type="button"></button>
+            <div class="banner__inner-foto-list">
+              <ul class="banner__photo-list" id="slider__list">
+                <li class="banner__photo-item slider__item">
+                  <picture class="banner__picture">
+                    <source type="image/webp" media="(min-width: 1170px)" srcset="img/banner-desktop.webp">
+                    <source type="image/webp" media="(min-width: 750px)" srcset="img/banner-tablet.webp">
+                    <source type="image/webp" srcset="img/banner-1.webp">
+                    <source media="(min-width: 1170px)" srcset="img/banner-desktop.jpg">
+                    <source media="(min-width: 750px)" srcset="img/banner-tablet.jpg">
+                    <img class="banner__photo" src="img/banner-1.jpg" srcset="img/banner-1.jpg" width="291" height="187" alt="баннер на улице Ленина">
+                  </picture>
+                  <p class="banner__address">Растяжка на ул. Ленина</p>
+                </li>
+                <li class="banner__photo-item slider__item">
+                  <picture class="banner__picture">
+                    <source type="image/webp" media="(min-width: 1170px)" srcset="img/banner-desktop.webp">
+                    <source type="image/webp" media="(min-width: 750px)" srcset="img/banner-tablet.webp">
+                    <source type="image/webp" srcset="img/banner-1.webp">
+                    <source media="(min-width: 1170px)" srcset="img/banner-desktop.jpg">
+                    <source media="(min-width: 750px)" srcset="img/banner-tablet.jpg">
+                    <img class="banner__photo" src="img/banner-1.jpg" srcset="img/banner-1.jpg" width="291" height="187" alt="баннер на улице Ленина">
+                  </picture>
+                  <p class="banner__address">Растяжка на ул. Ленина</p>
+                </li>
+                <li class="banner__photo-item slider__item">
+                  <picture class="banner__picture">
+                    <source type="image/webp" media="(min-width: 1170px)" srcset="img/banner-desktop.webp">
+                    <source type="image/webp" media="(min-width: 750px)" srcset="img/banner-tablet.webp">
+                    <source type="image/webp" srcset="img/banner-1.webp">
+                    <source media="(min-width: 1170px)" srcset="img/banner-desktop.jpg">
+                    <source media="(min-width: 750px)" srcset="img/banner-tablet.jpg">
+                    <img class="banner__photo" src="img/banner-1.jpg" srcset="img/banner-1.jpg" width="291" height="187" alt="баннер на улице Ленина">
+                  </picture>
+                  <p class="banner__address">Растяжка на ул. Ленина</p>
+                </li>
+
+              </ul>
+              <button class="banner__link slider__button slider__link-left" type="button"></button>
+              <button class="banner__link banner__link--right slider__button slider__link-right" type="button"></button>
+            </div>
             <div class="banner__form">
               <p class="banner__qwestion">Есть вопросы?</p>
               <p class="banner__paragraph">Закажите консультацию</p>
@@ -210,8 +228,8 @@
       </section>
       <section class="comment container">
         <h3 class="comment__title" id="comment">3. Отзывы</h3>
-        <ul class="comment__list">
-          <li class="comment__item">
+        <ul class="comment__list" id="slider__list">
+          <li class="comment__item slider__item">
             <img class="comment__img" src="img/profile-man.jpg" width="136" height="136" alt="фото пользователя">
             <p class="comment__paragraph">
               Обратился в компанию АртАктив за визитками. Это мой первый опыт, поэтому немного нервничал, не знал, с чего начать. Остался доволен, потому что мне всё объяснили, показали и сделали по высшему разряду. Советую!
@@ -219,25 +237,25 @@
             <a class="comment__link-user" href="#">vk.com/mr.sharp</a>
           </p>
           </li>
-          <li class="comment__item">
+          <li class="comment__item slider__item">
             <img class="comment__img" src="img/profile-man.jpg" width="136" height="136" alt="фото пользователя">
             <p class="comment__paragraph">
               Обратился в компанию АртАктив за визитками. Это мой первый опыт, поэтому немного нервничал, не знал, с чего начать. Остался доволен, потому что мне всё объяснили, показали и сделали по высшему разряду. Советую!
+              <span class="comment__user">Александров Максим, 24 года</span>
+              <a class="comment__link-user" href="#">vk.com/mr.sharp</a>
             </p>
-            <span class="commemt__user">Александров Максим, 24 года</span>
-            <a class="comment__link-user" href="#">vk.com/mr.sharp</a>
           </li>
-          <li class="comment__item">
+          <li class="comment__item slider__item">
             <img class="comment__img" src="img/profile-man.jpg" width="136" height="136" alt="фото пользователя">
             <p class="comment__paragraph">
               Обратился в компанию АртАктив за визитками. Это мой первый опыт, поэтому немного нервничал, не знал, с чего начать. Остался доволен, потому что мне всё объяснили, показали и сделали по высшему разряду. Советую!
+              <span class="comment__user">Александров Максим, 24 года</span>
+              <a class="comment__link-user" href="#">vk.com/mr.sharp</a>
             </p>
-            <span class="commemt__user">Александров Максим, 24 года</span>
-            <a class="comment__link-user" href="#">vk.com/mr.sharp</a>
           </li>
         </ul>
-          <button class="comment__link" type="button"></button>
-          <button class="comment__link" type="button"></button>
+        <button class="comment__link slider__link-left slider__button" type="button"></button>
+        <button class="comment__link slider__link-right slider__button" type="button"></button>
       </section>
       <section class="faq container">
         <h3 class="faq__h3" id="faq">4. Частые вопросы (FAQ)</h3>
@@ -314,5 +332,6 @@
     </footer>
     <div class="page-on"></div>
     <script src="js/main.js"></script>
+    <script src="js/slider.js"></script>
   </body>
 </html>
