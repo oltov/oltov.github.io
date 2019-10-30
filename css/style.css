@@ -171,7 +171,7 @@ li {
   background: url("../img/telegram.svg") no-repeat center;
 }
 
-@media (min-width: 660px) {
+@media (min-width: 695px) {
   .container {
     width: 695px;
   }
