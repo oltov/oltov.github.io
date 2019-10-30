@@ -9,6 +9,11 @@ li {
   background-color: #efefef;
   font-family: "Roboto Mono", sans-serif;
 }
+
+.main {
+  margin: 0 auto;
+}
+
 .header {
   font-size:30px;
   padding:0;
@@ -51,8 +56,8 @@ li {
 
 .website-item {
   margin-bottom: 120px;
-  margin-right: 50px;
-  margin-left: 50px;
+  margin-right: 7%;
+  margin-left: 7%;
 }
 
 .website-item:hover {
