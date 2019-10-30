@@ -8,6 +8,7 @@ li {
   padding: 0;
   background-color: #efefef;
   font-family: "Roboto Mono", sans-serif;
+  min-width: 320px;
 }
 
 .main {
@@ -172,7 +173,7 @@ li {
 
 @media (min-width: 660px) {
   .container {
-    width: 660px;
+    width: 695px;
   }
 }
 
