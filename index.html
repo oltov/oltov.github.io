@@ -1,112 +1,131 @@
 <!DOCTYPE html>
 <html lang="ru">
-    <head>
-      <meta charset="utf-8">
-      <title>Портфолио Болтов Михаил</title>
-      <meta name="viewport" content="width=device-width,initial-scale=1">
-      <link href="css/style.css" rel="stylesheet">
-      <link href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap&subset=cyrillic,cyrillic-ext" rel="stylesheet">
-    </head>
-    <body class="body">
-      <header class="header">
-        <div class="header-wrapper container">
-          <h1 class="main-title">БОЛТОВ МИХАИЛ</h1>
-          <ul class="social">
-            <li class="social-item">
-              <a href="https://github.com/oltov" class="social-link" title="github"></a>
+  <head>
+    <meta charset="utf-8">
+    <title>Портфолио Болтов Михаил</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap&subset=cyrillic,cyrillic-ext" rel="stylesheet">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  </head>
+  <body class="body">
+    <header class="header">
+      <div class="header-wrapper container">
+        <img class="header__foto" src="img/autor-mobile.jpg" srcset="img/autor-mobile 320w, img/autor-tablet.jpg 695w" sizes="(max-width: 180px) 180px" alt="фото автора">
+        <h1 class="main-title">БОЛТОВ МИХАИЛ</h1>
+        <ul class="social">
+          <li class="social-item">
+            <a href="https://github.com/oltov" class="social-link" title="github"></a>
+          </li>
+          <li class="social-item">
+            <a href="mailto:boltov.mihail@gmail.com" class="social-link mail" title="e-mail"></a>
+          </li>
+          <li class="social-item">
+            <a href="tg://resolve?domain=oltov" class="social-link telegram" title="telegram"></a>
+          </li>
+          <li class="social-item">
+            <a href="https://twitter.com/oltov_" class="social-link twitter" title="twitter"></a>
+          </li>
+        </ul>
+      </div>
+    </header>
+    <main class="main">
+      <h2 class="title">учебные проекты</h2>
+      <div class="inner__slider">
+        <div class="slider__wrapper">
+          <ul class="website-list" id="slider__list">
+            <li class="website-item slider__item slider__left-off slider__move">
+              <a class="website-link" href="gllacy/index.html">
+                <img class="img-site" src="img/gllacy-mobile.jpg" srcset="img/gllacy-mobile.jpg 320w, img/gllacy-tablet.jpg 695w, img/gllacy-desktop.jpg 1200w" sizes="(max-width: 480px) 480px" alt="сайт магазина мороженого">
+              </a>
+              <p class="website-paragraph">
+                Интернет-магазин мороженого
+                Фиксированная верстка(960px) Кроссбраузерность
+              </p>
             </li>
-            <li class="social-item">
-              <a href="mailto:boltov.mihail@gmail.com" class="social-link mail" title="e-mail"></a>
+            <li class="website-item slider__item slider__left slider__move">
+              <a class="website-link" href="pink/index.html">
+                <img class="img-site" src="img/pink.jpg" srcset="img/pink-mobile.jpg 320w, img/pink-tablet.jpg 695w, img/pink-desktop.jpg 1200w" sizes="(max-width: 480px) 480px" alt="сайт о приложении">
+              </a>
+              <p class="website-paragraph">
+                Сайт фотоприложения
+                Адаптивная верстка 330px/660px/960px Кроссбраузерность
+                Ретинизация БЭМ SASS Gulp Оптимизация изображений
+              </p>
             </li>
-            <li class="social-item">
-              <a href="tg://resolve?domain=oltov" class="social-link telegram" title="telegram"></a>
+            <li class="website-item slider__item slider__center--on slider__move">
+              <a class="website-link" href="keksobuking/index.html">
+                <img class="img-site" src="img/keksobooking.jpg" srcset="img/keksobooking-mobile.jpg 320w, img/keksobooking-tablet.jpg 695w, img/keksobooking-desktop.jpg 1200w" sizes="(max-width: 480px) 480px" alt="сайт JavaScript функционала">
+              </a>
+              <p class="website-paragraph">
+                Cервис размещения объявлений о сдаче в аренду недвижимости.
+                Реализация функционала сервиса. Нативный JavaScript
+              </p>
+            </li>
+            <li class="website-item slider__item slider__right slider__move">
+              <a class="website-link" href="wheels/index.html">
+                <img class="img-site" src="img/wheels-mobile.jpg" srcset="img/wheels-mobile.jpg 320w, img/wheels-tablet.jpg 695w, img/wheels-desktop.jpg 1200w" sizes="(max-width: 480px) 480px" alt="сайт магазина велосипедов">
+              </a>
+              <p class="website-paragraph">
+                Интернет-магазин велосипедов.
+                Фиксированная верстка(1536px). Кроссбраузерность.
+                БЭМ SASS Gulp
+              </p>
+            </li>
+            <li class="website-item slider__item slider__right-off slider__move">
+              <a class="website-link" href="art-active/index.html">
+                <img class="img-site" src="img/art.jpg" srcset="img/art-mobile.jpg 320w, img/art-tablet.jpg 695w, img/art-desktop.jpg 1200w" sizes="(max-width: 480px) 480px" alt="полиграфии">
+              </a>
+              <p class="website-paragraph">
+                Сайт полиграфии.
+                Адаптивная верстка 320px/750px/1170px Кроссбраузерность.
+                БЭМ SASS Gulp JavaScript Оптимизация изображений
+              </p>
             </li>
           </ul>
         </div>
-      </header>
-      <main class="main">
-        <h2 class="title">учебные проекты</h2>
-        <ul class="website-list">
-          <li class="website-item">
-            <a class="website-link" href="gllacy/index.html">
-              <img class="img-site" src="img/gllacy.png" width="244" height="244" alt="сайт магазина мороженого">
-            </a>
-            <p class="website-paragraph">
-              Интернет-магазин мороженого
-              Фиксированная верстка(960px) Кроссбраузерность
-            </p>
+      </div>
+      <div class="button__inner">
+        <button class="button button__left slider__button"></button>
+        <button class="button button__right slider__button slider__link-right"></button>
+        </div>
+      <h2 class="title">сертификаты</h2>
+      <ul class="certificate">
+        <li class="certificate-item">
+          <a class="certificate-link" href="#html1" >
+            <img class="img" src="img/html1-mobile.jpg" srcset="img/html1-mobile.jpg 320w, img/html1-tablet.jpg 695w, img/html1-desktop.jpg 1200w" sizes="(max-width: 480px) 480px" alt="сертификат html уровень 1">
+          </a>
+          <a class="hidden" href="#_" id="html1">
+            <picture>
+              <source type="image/webp" srcset="img/html1.webp 1x">
+              <img class="hidden-img" src="img/html1.png" srcset="img/html_1.webp 1x" alt="сертификат html уровень 1">
+            </picture>
+          </a>
           </li>
-          <li class="website-item">
-            <a class="website-link" href="pink/index.html">
-              <img class="img-site" src="img/pink.png" width="244" height="244" alt="сайт о приложении">
-            </a>
-            <p class="website-paragraph">
-              Сайт фотоприложения
-              Адаптивная верстка 330px/660px/960px Кроссбраузерность
-              Ретинизация БЭМ SASS Gulp Оптимизация изображений
-            </p>
-          </li>
-          <li class="website-item">
-            <a class="website-link" href="keksobuking/index.html">
-              <img class="img-site" src="img/keksobooking.png" width="244" height="244" alt="сайт JavaScript функционала">
-            </a>
-            <p class="website-paragraph">
-              Cервис размещения объявлений о сдаче в аренду недвижимости.
-              Реализация функционала сервиса. Нативный JavaScript
-            </p>
-          </li>
-          <li class="website-item">
-            <a class="website-link" href="wheels/index.html">
-              <img class="img-site" src="img/wheels.png" width="244" height="244" alt="сайт магазина велосипедов">
-            </a>
-            <p class="website-paragraph">
-              Интернет-магазин велосипедов.
-              Фиксированная верстка(1536px). Кроссбраузерность.
-              БЭМ SASS Gulp
-            </p>
-          </li>
-          <li class="website-item">
-            <a class="website-link" href="art-active/index.html">
-              <img class="img-site" src="img/art-active.png" width="244" height="244" alt="полиграфии">
-            </a>
-            <p class="website-paragraph">
-              Сайт оперативной полиграфии.
-              Адаптивная верстка 320px/750px/1170px Кроссбраузерность.
-              БЭМ SASS Gulp JavaScript Оптимизация изображений
-            </p>
-          </li>
-
-        </ul>
-        <h2 class="title">сертификаты</h2>
-        <ul class="certificate">
-          <li class="certificate-item">
-            <a class="certificate-link" href="#html1" ><img class="img" src="img/html1-min.png" width="250" height="250" alt="сертификат html уровень 1"></a>
-            <a class="hidden" href="#_" id="html1">
-              <picture>
-                <source type="image/webp" srcset="img/html1.webp 1x">
-                <img class="hidden-img" src="img/html1.png" srcset="img/html_1.webp 1x" alt="сертификат html уровень 1">
-              </picture>
-            </a>
-            </li>
-          <li class="certificate-item">
-            <a class="certificate-link" href="#html2"><img class="img" src="img/html2-min.png" width="250" height="250" alt="сертификат html уровень 2"></a>
-            <a class="hidden" href="#_" id="html2">
-              <picture>
-                <source type="image/webp" srcset="img/html2.webp 1x">
-                <img class="hidden-img" src="img/html2.png" srcset="img/html2.webp" alt="сертификат html уровень 2">
-              </picture>
-            </a>
-          </li>
-          <li class="certificate-item">
-            <a class="certificate-link" href="#js1"><img class="img" src="img/js1-min.png" width="250" height="250" alt="сертификат JavaScript уровень 1"></a>
-            <a class="hidden" href="#_" id="js1">
-              <picture>
-                <source type="image/webp" srcset="img/js1.webp 1x">
-                <img class="hidden-img" src="img/js1.jpg" srcset="img/js1.webp 1x" alt="сертификат JavaScript уровень 1">
-              </picture>
-            </a>
-          </li>
-        </ul>
-      </main>
-    </body>
+        <li class="certificate-item">
+          <a class="certificate-link" href="#html2">
+            <img class="img" src="img/html2-mobile.jpg" srcset="img/html2-mobile.jpg 320w, img/html2-tablet.jpg 695w, img/html2-desktop.jpg 1200w" sizes="(max-width: 480px) 480px" alt="сертификат html уровень 2">
+          </a>
+          <a class="hidden" href="#_" id="html2">
+            <picture>
+              <source type="image/webp" srcset="img/html2.webp 1x">
+              <img class="hidden-img" src="img/html2.png" srcset="img/html2.webp" alt="сертификат html уровень 2">
+            </picture>
+          </a>
+        </li>
+        <li class="certificate-item">
+          <a class="certificate-link" href="#js1">
+            <img class="img" src="img/js1-mobile.jpg" srcset="img/js1-mobile.jpg 320w, img/js1-tablet.jpg 695w, img/js1-desktop.jpg 1200w" sizes="(max-width: 480px) 480px" alt="сертификат JavaScript уровень 1">
+          </a>
+          <a class="hidden" href="#_" id="js1">
+            <picture>
+              <source type="image/webp" srcset="img/js1.webp 1x">
+              <img class="hidden-img" src="img/js1.jpg" srcset="img/js1.webp 1x" alt="сертификат JavaScript уровень 1">
+            </picture>
+          </a>
+        </li>
+      </ul>
+    </main>
+    <script src="js/slider.js"></script>
+  </body>
 </html>

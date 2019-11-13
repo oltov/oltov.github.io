@@ -1,6 +1,5 @@
-li {
+li[class] {
   list-style: none;
-  width: 250px;
 }
 
 .body {
@@ -21,17 +20,24 @@ li {
   text-align:center;
 }
 
+.header__foto {
+  width: 150px;
+  height: 150px;
+  margin-top: 50px;
+  border-radius: 50%;
+}
+
 .main-title {
   margin: 0;
-  padding: 80px 20px;
+  padding: 20px 20px;
   padding-bottom: 25px;
-  font-size: 40px;
+  font-size: 35px;
 }
 
 .title {
   margin: 0;
   padding: 0;
-  margin-top: 0;
+  margin-top: 50px;
   text-align: center;
 }
 
@@ -41,68 +47,145 @@ li {
 }
 
 .website-list {
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
-  margin-top: 20px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  flex-wrap: wrap;
+  width: 206px;
+  height: 131px;
+  position: relative;
+  transform-style: preserve-3d;
+  perspective: 1000px;
 }
 
 .website-link {
   display: block;
-  height: 250px;
+  height: 131px;
 }
 
 .website-item {
-  margin-bottom: 120px;
-  margin-right: 7%;
-  margin-left: 7%;
-}
-
-.website-item:hover {
-  position: relative;
-  z-index: 10;
-  border-radius: 5px 5px 0 0;
-}
-
-.website-item:hover .website-paragraph {
-  display: block;
   position: absolute;
-  z-index: 5;
-  width: 250px;
+  opacity: 1;
 }
 
 .website-paragraph {
   margin: 0;
   padding: 0;
-  display: none;
+  padding-top: 10px;
+  display: block;
   text-align: center;
   font-size: 15px;
   border-radius: 0 0 5px 5px;
   min-height: 100px;
+  opacity: 1;
+  transition: all 0.6s ease-in-out;
 }
 
 .img {
-  border-radius: 50%;
+  width: 200px;
+  height: 125px;
+  border-radius: 10px;
 }
 
 .img-site {
-  border: 3px solid #a5a5f3;
-  border-radius: 50%;
+  width: 200px;
+  height: 125px;
+  border: 3px solid #868c56a8;
+  border-radius: 5px;
   box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 
-.img-site:hover {
-  transition: 0.3s;
-  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+.button__inner {
+  width: 200px;
+  margin: 0 auto;
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.button {
+  border: none;
+  width: 25px;
+  height: 45px;
+  cursor: pointer;
+  outline: none;
+  transition: transform 0.1s ease-in-out;
+}
+
+/* .button:active {
+  transform: scale(0.97);
+} */
+
+.button__left {
+  background: url('../img/left-arrow-3.svg') no-repeat center;
+}
+
+.button__right {
+  background: url('../img/left-arrow-3.svg') no-repeat center;
+  transform: rotateY(180deg);
+}
+
+.button__move {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-210px) translateZ(-150px) rotateY(45deg);
+}
+
+.inner__slider {
+  height: 316px;
+  overflow: hidden;
+}
+
+.slider__wrapper {
+  margin-top: 30px;
+}
+
+/*======== классы для трансформации слайдера ===========*/
+.slider__center--on {
+  z-index: 200;
+}
+
+.slider__left {
+  transform: translateX(-170px) translateZ(-120px) rotateY(30deg);
+  z-index: 100;
+}
+
+.slider__left-off {
+  transform: translateX(-220px) translateZ(-180px) rotateY(30deg);
+  opacity: 0;
+  z-index: 50;
+}
+
+.slider__right {
+  transform: translateX(170px) translateZ(-120px) rotateY(-30deg);
+  z-index: 100;
+}
+
+.slider__right-off {
+  transform: translateX(220px) translateZ(-180px) rotateY(-30deg);
+  opacity: 0;
+  z-index: 50;
+}
+
+li.slider__move {
+	-webkit-transition: all 0.5s ease-in-out;
+	-moz-transition: all 0.5s ease-in-out;
+	-o-transition: all 0.5s ease-in-out;
+	-ms-transition: all 0.5s ease-in-out;
+	transition: all 0.5s ease-in-out;
+}
+
+/*========================================*/
+
+.slider__left .website-paragraph,
+.slider__left-off .website-paragraph,
+.slider__right .website-paragraph,
+.slider__right-off .website-paragraph {
+  opacity: 0;
 }
 
 .certificate {
   margin: 0;
   padding: 0;
-  margin-top: 20px;
+  margin-top: 30px;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -116,8 +199,8 @@ li {
 
 .certificate-link {
   display: block;
-  width: 250px;
-  height: 250px;
+  width: 200px;
+  height: 125px;
 }
 
 .hidden {
@@ -171,15 +254,150 @@ li {
   background: url("../img/telegram.svg") no-repeat center;
 }
 
+.twitter {
+  background: url("../img/twitter.svg") no-repeat center;
+
+}
+
 @media (min-width: 695px) {
   .container {
     width: 695px;
   }
+
+  .header__foto {
+    width: 180px;
+    height: 180px;
+  }
+
+  .title {
+    margin-top: 30px;
+  }
+
+  .social {
+    margin-bottom: 20px;
+  }
+
+  .main-title {
+    padding: 20px;
+    font-size: 40px;
+  }
+
+  .img-site {
+    width: 300px;
+    height: 188px;
+    border-radius: 10px;
+  }
+
+  .website-list {
+    width: 306px;
+    height: 194px;
+  }
+
+  .website-link {
+    height: 194px;
+  }
+
+  .website-paragraph {
+    padding-top: 10px;
+  }
+
+  /*======== классы для слайдера ===========*/
+
+  .slider__left {
+    transform: translateX(-240px) translateZ(-200px) rotateY(35deg);
+    z-index: 100;
+  }
+
+  .slider__left-off {
+    transform: translateX(-320px) translateZ(-250px) rotateY(35deg);
+    opacity: 0;
+    z-index: 50;
+  }
+
+  .slider__right {
+    transform: translateX(240px) translateZ(-200px) rotateY(-35deg);
+    z-index: 100;
+  }
+
+  .slider__right-off {
+    transform: translateX(320px) translateZ(-250px) rotateY(-35deg);
+    opacity: 0;
+    z-index: 50;
+  }
+
+  .img {
+    width: 300px;
+    height: 188px;
+  }
+
+  .certificate-link {
+    width: 300px;
+    height: 188px;
+  }
+
 }
 
 @media (min-width: 1200px) {
   .container {
     width: 1200px;
+  }
+
+  .title {
+    margin-top: 40px;
+  }
+
+  .img-site {
+    width: 480px;
+    height: 300px;
+  }
+
+  .img {
+    width: 480px;
+    height: 300px;
+  }
+
+  .certificate-link {
+    width: 486px;
+    height: 300px;
+  }
+
+  .inner__slider {
+    height: 406px;
+  }
+
+  .website-list {
+    width: 486px;
+    height: 306px;
+  }
+
+  .website-link {
+    height: 306px;
+  }
+
+  .website-paragraph {
+    min-height: auto;
+  }
+
+  .slider__left {
+    transform: translate(-370px) translateZ(-200px) rotateY(45deg);
+    z-index: 100;
+  }
+
+  .slider__left-off {
+    transform: translate(-440px) translateZ(-250px) rotateY(45deg);
+    opacity: 0;
+    z-index: 50;
+  }
+
+  .slider__right {
+    transform: translate(370px) translateZ(-200px) rotateY(-45deg);
+    z-index: 100;
+  }
+
+  .slider__right-off {
+    transform: translate(440px) translateZ(-250px) rotateY(-45deg);
+    opacity: 0;
+    z-index: 50;
   }
 }
 
