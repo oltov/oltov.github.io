@@ -4,14 +4,19 @@
     <meta charset="utf-8">
     <title>Портфолио Болтов Михаил</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style-min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap&subset=cyrillic,cyrillic-ext" rel="stylesheet">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
   </head>
   <body class="body">
     <header class="header">
       <div class="header-wrapper container">
-        <img class="header__foto" src="img/autor-mobile.jpg" srcset="img/autor-mobile 320w, img/autor-tablet.jpg 695w" sizes="(max-width: 180px) 180px" alt="фото автора">
+        <picture class="picture">
+          <source type="image/webp" media="(min-width: 695px)" srcset="img/autor-tablet.webp">
+          <source type="image/webp" srcset="img/autor-mobile.webp">
+          <source media="(min-width: 695px)" srcset="img/autor-tablet.jpg">
+          <img class="header__foto" src="img/autor-mobile.jpg" alt="фото автора">
+        </picture>
         <h1 class="main-title">БОЛТОВ МИХАИЛ</h1>
         <ul class="social">
           <li class="social-item">
@@ -36,7 +41,14 @@
           <ul class="website-list" id="slider__list">
             <li class="website-item slider__item slider__left-off slider__move">
               <a class="website-link" href="gllacy/index.html">
-                <img class="img-site" src="img/gllacy-mobile.jpg" srcset="img/gllacy-mobile.jpg 320w, img/gllacy-tablet.jpg 695w, img/gllacy-desktop.jpg 1200w" sizes="(max-width: 480px) 480px" alt="сайт магазина мороженого">
+                <picture class="picture">
+                  <source type="image/webp" media="(min-width: 1200px)" srcset="img/gllacy-desktop.webp">
+                  <source type="image/webp" media="(min-width: 695px)" srcset="img/gllacy-tablet.webp">
+                  <source type="image/webp" srcset="img/gllacy-mobile.webp">
+                  <source media="(min-width: 1200px)" srcset="img/gllacy-desktop.jpg">
+                  <source media="(min-width: 695px)" srcset="img/gllacy-tablet.jpg">
+                  <img class="img-site" src="img/gllacy-mobile.jpg" alt="сайт магазина мороженого">
+                </picture>
               </a>
               <p class="website-paragraph">
                 Интернет-магазин мороженого
@@ -45,7 +57,14 @@
             </li>
             <li class="website-item slider__item slider__left slider__move">
               <a class="website-link" href="pink/index.html">
-                <img class="img-site" src="img/pink-mobile.jpg" srcset="img/pink-mobile.jpg 320w, img/pink-tablet.jpg 695w, img/pink-desktop.jpg 1200w" sizes="(max-width: 480px) 480px" alt="сайт о приложении">
+                <picture class="picture">
+                  <source type="image/webp" media="(min-width: 1200px)" srcset="img/pink-desktop.webp">
+                  <source type="image/webp" media="(min-width: 695px)" srcset="img/pink-tablet.webp">
+                  <source type="image/webp" srcset="img/pink-mobile.webp">
+                  <source media="(min-width: 1200px)" srcset="img/pink-desktop.jpg">
+                  <source media="(min-width: 695px)" srcset="img/pink-tablet.jpg">
+                  <img class="img-site" src="img/pink-mobile.jpg" alt="сайт о приложении">
+                </picture>
               </a>
               <p class="website-paragraph">
                 Сайт фотоприложения
@@ -55,7 +74,14 @@
             </li>
             <li class="website-item slider__item slider__center--on slider__move">
               <a class="website-link" href="keksobuking/index.html">
-                <img class="img-site" src="img/keksobooking-mobile.jpg" srcset="img/keksobooking-mobile.jpg 320w, img/keksobooking-tablet.jpg 695w, img/keksobooking-desktop.jpg 1200w" sizes="(max-width: 480px) 480px" alt="сайт JavaScript функционала">
+                <picture class="picture">
+                  <source type="image/webp" media="(min-width: 1200px)" srcset="img/keksobooking-desktop.webp">
+                  <source type="image/webp" media="(min-width: 695px)" srcset="img/keksobooking-tablet.webp">
+                  <source type="image/webp" srcset="img/keksobooking-mobile.webp">
+                  <source media="(min-width: 1200px)" srcset="img/keksobooking-desktop.jpg">
+                  <source media="(min-width: 695px)" srcset="img/keksobooking-tablet.jpg">
+                  <img class="img-site" src="img/keksobooking-mobile.jpg" alt="сайт подбора недвижимости">
+                </picture>
               </a>
               <p class="website-paragraph">
                 Cервис размещения объявлений о сдаче в аренду недвижимости.
@@ -64,7 +90,14 @@
             </li>
             <li class="website-item slider__item slider__right slider__move">
               <a class="website-link" href="wheels/index.html">
-                <img class="img-site" src="img/wheels-mobile.jpg" srcset="img/wheels-mobile.jpg 320w, img/wheels-tablet.jpg 695w, img/wheels-desktop.jpg 1200w" sizes="(max-width: 480px) 480px" alt="сайт магазина велосипедов">
+                <picture class="picture">
+                  <source type="image/webp" media="(min-width: 1200px)" srcset="img/wheels-desktop.webp">
+                  <source type="image/webp" media="(min-width: 695px)" srcset="img/wheels-tablet.webp">
+                  <source type="image/webp" srcset="img/wheels-mobile.webp">
+                  <source media="(min-width: 1200px)" srcset="img/wheels-desktop.jpg">
+                  <source media="(min-width: 695px)" srcset="img/wheels-tablet.jpg">
+                  <img class="img-site" src="img/wheels-mobile.jpg" alt="сайт магазина велосипедов">
+                </picture>
               </a>
               <p class="website-paragraph">
                 Интернет-магазин велосипедов.
@@ -74,7 +107,14 @@
             </li>
             <li class="website-item slider__item slider__right-off slider__move">
               <a class="website-link" href="art-active/index.html">
-                <img class="img-site" src="img/art-mobile.jpg" srcset="img/art-mobile.jpg 320w, img/art-tablet.jpg 695w, img/art-desktop.jpg 1200w" sizes="(max-width: 480px) 480px" alt="полиграфии">
+                <picture class="picture">
+                  <source type="image/webp" media="(min-width: 1200px)" srcset="img/art-desktop.webp">
+                  <source type="image/webp" media="(min-width: 695px)" srcset="img/art-tablet.webp">
+                  <source type="image/webp" srcset="img/art-mobile.webp">
+                  <source media="(min-width: 1200px)" srcset="img/art-desktop.jpg">
+                  <source media="(min-width: 695px)" srcset="img/art-tablet.jpg">
+                  <img class="img-site" src="img/art-mobile.jpg" alt="сайт полиграфии">
+                </picture>
               </a>
               <p class="website-paragraph">
                 Сайт полиграфии.
@@ -86,41 +126,74 @@
         </div>
       </div>
       <div class="button__inner">
-        <button class="button button__left slider__button"></button>
-        <button class="button button__right slider__button slider__link-right"></button>
+        <button class="button button__left slider__button" title="кнопка" tabindex="0"></button>
+        <button class="button button__right slider__button slider__link-right" title="кнопка" tabindex="0"></button>
         </div>
       <h2 class="title">сертификаты</h2>
       <ul class="certificate">
         <li class="certificate-item">
-          <a class="certificate-link" href="#html1" >
-            <img class="img" src="img/html1-mobile.jpg" srcset="img/html1-mobile.jpg 320w, img/html1-tablet.jpg 695w, img/html1-desktop.jpg 1200w" sizes="(max-width: 480px) 480px" alt="сертификат html уровень 1">
+          <a class="certificate-link" href="#html1">
+            <picture class="picture">
+              <source type="image/webp" media="(min-width: 1200px)" srcset="img/html1-desktop.webp">
+              <source type="image/webp" media="(min-width: 695px)" srcset="img/html1-tablet.webp">
+              <source type="image/webp" srcset="img/html1-mobile.webp">
+              <source media="(min-width: 1200px)" srcset="img/html1-desktop.jpg">
+              <source media="(min-width: 695px)" srcset="img/html1-tablet.jpg">
+              <img class="img" src="img/html1-mobile.jpg" alt="сертификат html уровень 1">
+            </picture>
           </a>
           <a class="hidden" href="#_" id="html1">
             <picture>
-              <source type="image/webp" srcset="img/html1.webp 1x">
-              <img class="hidden-img" src="img/html1.png" srcset="img/html_1.webp 1x" alt="сертификат html уровень 1">
+              <source type="image/webp" media="(min-width: 1200px)" srcset="img/html1-full-desktop.webp">
+              <source type="image/webp" media="(min-width: 695px)" srcset="img/html1-full-tablet.webp">
+              <source type="image/webp" srcset="img/html1-full-mobile.webp">
+              <source media="(min-width: 1200px)" srcset="img/html1-full-desktop.jpg">
+              <source media="(min-width: 695px)" srcset="img/html1-full-tablet.jpg">
+              <img class="hidden-img" src="img/html1-full.png" alt="сертификат html уровень 1">
             </picture>
           </a>
           </li>
         <li class="certificate-item">
           <a class="certificate-link" href="#html2">
-            <img class="img" src="img/html2-mobile.jpg" srcset="img/html2-mobile.jpg 320w, img/html2-tablet.jpg 695w, img/html2-desktop.jpg 1200w" sizes="(max-width: 480px) 480px" alt="сертификат html уровень 2">
+            <picture class="picture">
+              <source type="image/webp" media="(min-width: 1200px)" srcset="img/html2-desktop.webp">
+              <source type="image/webp" media="(min-width: 695px)" srcset="img/html2-tablet.webp">
+              <source type="image/webp" srcset="img/html2-mobile.webp">
+              <source media="(min-width: 1200px)" srcset="img/html2-desktop.jpg">
+              <source media="(min-width: 695px)" srcset="img/html2-tablet.jpg">
+              <img class="img" src="img/html2-mobile.jpg" alt="сертификат html уровень 2">
+            </picture>
           </a>
           <a class="hidden" href="#_" id="html2">
             <picture>
-              <source type="image/webp" srcset="img/html2.webp 1x">
-              <img class="hidden-img" src="img/html2.png" srcset="img/html2.webp" alt="сертификат html уровень 2">
+              <source type="image/webp" media="(min-width: 1200px)" srcset="img/html2-full-desktop.webp">
+              <source type="image/webp" media="(min-width: 695px)" srcset="img/html2-full-tablet.webp">
+              <source type="image/webp" srcset="img/html2-full-mobile.webp">
+              <source media="(min-width: 1200px)" srcset="img/html2-full-desktop.jpg">
+              <source media="(min-width: 695px)" srcset="img/html2-full-tablet.jpg">
+              <img class="hidden-img" src="img/html2-full.png" alt="сертификат html уровень 2">
             </picture>
           </a>
         </li>
         <li class="certificate-item">
           <a class="certificate-link" href="#js1">
-            <img class="img" src="img/js1-mobile.jpg" srcset="img/js1-mobile.jpg 320w, img/js1-tablet.jpg 695w, img/js1-desktop.jpg 1200w" sizes="(max-width: 480px) 480px" alt="сертификат JavaScript уровень 1">
+            <picture class="picture">
+              <source type="image/webp" media="(min-width: 1200px)" srcset="img/js1-desktop.webp">
+              <source type="image/webp" media="(min-width: 695px)" srcset="img/js1-tablet.webp">
+              <source type="image/webp" srcset="img/js1-mobile.webp">
+              <source media="(min-width: 1200px)" srcset="img/js1-desktop.jpg">
+              <source media="(min-width: 695px)" srcset="img/js1-tablet.jpg">
+              <img class="img" src="img/js1-mobile.jpg" alt="сертификат JavaScript уровень 1">
+            </picture>
           </a>
           <a class="hidden" href="#_" id="js1">
             <picture>
-              <source type="image/webp" srcset="img/js1.webp 1x">
-              <img class="hidden-img" src="img/js1.jpg" srcset="img/js1.webp 1x" alt="сертификат JavaScript уровень 1">
+              <source type="image/webp" media="(min-width: 1200px)" srcset="img/js1-full-desktop.webp">
+              <source type="image/webp" media="(min-width: 695px)" srcset="img/js1-full-tablet.webp">
+              <source type="image/webp" srcset="img/js1-full-mobile.webp">
+              <source media="(min-width: 1200px)" srcset="img/js1-full-desktop.jpg">
+              <source media="(min-width: 695px)" srcset="img/js1-full-tablet.jpg">
+              <img class="hidden-img" src="img/js1-full.png" alt="сертификат JavaScript уровень 1">
             </picture>
           </a>
         </li>
