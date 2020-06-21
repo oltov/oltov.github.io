@@ -1855,8 +1855,8 @@ input:matches([type="email"],
       -webkit-transform: scaleX(1);
               transform: scaleX(1); }
     .form__inner--active > .form__label {
-      -webkit-transform: translate3d(0px, -30px, 0) scale(0.7);
-              transform: translate3d(0px, -30px, 0) scale(0.7);
+      -webkit-transform: translate3d(0, -30px, 0) scale(0.7);
+              transform: translate3d(0, -30px, 0) scale(0.7);
       color: #2196f3; }
     .form__inner--warning > .form__label {
       color: red; }
@@ -1873,7 +1873,7 @@ input:matches([type="email"],
             transform-origin: top left;
     -webkit-transform: translateY(-50%);
             transform: translateY(-50%);
-    font-size: 20px;
+    font-size: 18px;
     line-height: 20px;
     font-weight: 300;
     vertical-align: baseline;
@@ -1900,7 +1900,7 @@ input:matches([type="email"],
     cursor: pointer; }
   .form__warning {
     position: absolute;
-    top: 32px;
+    top: 40px;
     left: 0;
     font-size: 13px;
     line-height: 15px;
@@ -1928,7 +1928,9 @@ input:matches([type="email"],
 
 @media (max-width: 1023px) {
   .form {
-    max-width: 80vw; } }
+    max-width: 80vw; }
+    .form__warning {
+      top: 34px; } }
 
 /* @media (hover: hover), screen and (min-width: 0\0) {
   &:hover,
