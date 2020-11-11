@@ -236,16 +236,14 @@
 
       // eslint-disable-next-line no-undef
       // eslint-disable-next-line no-undef
-      VK.Auth.login(getUserData);
+      VK.Auth.login(getUserData, { fields: 'first_name,last_name,sex,city,email' });
       // eslint-disable-next-line no-undef
       // VK.Api.call('users.get', { uids: id }, r => {
       //     if (r.response) {
       //         console.log(r.response);
       //     }
       // });
-      VK.Observer.subscribe("auth.login", function f(ev) {
-        console.log(ev);
-      });
+
 
       // fetch('https://oauth.vk.com/authorize?client_id=7659614&display=popup&redirect_uri=https://oltov.github.io&scope=email&response_type=token&v=5.59')
       // .then(response => {
