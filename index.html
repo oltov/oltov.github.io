@@ -38,7 +38,7 @@
     <main class="main">
       <button id="login_button" class="vk-btn">Кнопка vkontakte</button>
       <!-- <a href="https://oauth.vk.com/authorize?client_id=7659614&display=popup&redirect_uri=https://oltov.github.io/&scope=email&response_type=token&v=5.73">ссылка на vkontakte</a> -->
-      <a href="https://oauth.vk.com/authorize?client_id=7659614&display=page&redirect_uri=https://oltov.github.io/&scope=email&response_type=token&v=5.59" target="_blank">ссылка на vkontakte</a>
+      <a href="https://oauth.vk.com/authorize?client_id=7659614&display=page&redirect_uri=https://oltov.github.io/&scope=email,first_name,last_name,sex&response_type=token&v=5.59" target="_blank">ссылка на vkontakte</a>
       <h2 class="title">выполненные проекты</h2>
       <div class="inner__slider">
         <div class="slider__wrapper">
@@ -221,11 +221,11 @@
       });
 
       const getUserData = response => {
-        if (response.session) {
+        // if (response.session) {
           // eslint-disable-next-line prefer-destructuring
-          const id = response.session.mid;
+          // const id = response.session.mid;
           // eslint-disable-next-line no-undef
-          VK.Api.call('users.get', { user_ids: id, fields: 'first_name,last_name,sex,city,email', v:"5.73" }, r => {
+          VK.Api.call('users.get', { user_ids: response, fields: 'first_name,last_name,sex,city,email', v:"5.73" }, r => {
               if (r) {
                   // alert(r.response[0].sex);
                   // eslint-disable-next-line no-console
@@ -242,11 +242,11 @@
 
           console.log(response);
         }
-      }
+      // }
 
       // eslint-disable-next-line no-undef
       // eslint-disable-next-line no-undef
-      VK.Auth.login(getUserData);
+      // VK.Auth.login(getUserData);
       // eslint-disable-next-line no-undef
       // VK.Api.call('users.get', { uids: id }, r => {
       //     if (r.response) {
@@ -266,7 +266,14 @@
     <script>
       VK.init({apiId: 7659614});
       const url = window.location;
-      btn.innerHTML = url;
+      window.addEventListener('load', () => {
+        btn.innerHTML = url;
+        const qwe = new URL(url);
+        if (qwe.get('email')) {
+          btn.innerHTML = qwe.get('email');
+          getUserData(qwe.get('user_id'));
+        }
+      });
     </script>
   </body>
 </html>
