@@ -236,7 +236,7 @@
 
       // eslint-disable-next-line no-undef
       // eslint-disable-next-line no-undef
-      VK.Auth.login(getUserData, { fields: 'first_name,last_name,sex,city,email' });
+      VK.Auth.login(getUserData, { scope: 'email' });
       // eslint-disable-next-line no-undef
       // VK.Api.call('users.get', { uids: id }, r => {
       //     if (r.response) {
