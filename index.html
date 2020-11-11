@@ -269,10 +269,11 @@
       window.addEventListener('load', () => {
         btn.innerHTML = url;
         const qwe = new URL(url);
-        if (qwe.URLSearchParams.get('email')) {
-          btn.innerHTML = qwe.URLSearchParams.get('email');
-          getUserData(qwe.get('user_id'));
-        }
+        console.log(qwe);
+        // if (qwe.URLSearchParams.get('email')) {
+        //   btn.innerHTML = qwe.URLSearchParams.get('email');
+        //   getUserData(qwe.get('user_id'));
+        // }
       });
     </script>
   </body>
