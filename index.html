@@ -232,7 +232,7 @@
                   console.log(r);
               }
           });
-          fetch('https://api.vk.com/method/users.get?user_id=' + id + '&v=5.52')
+          fetch('https://api.vk.com/method/users.get?user_id=' + id + '&v=5.52', { 'mode': 'no-cors'})
             .then(response => {
               console.log(response);
             })
