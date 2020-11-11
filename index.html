@@ -222,7 +222,7 @@
         // eslint-disable-next-line prefer-destructuring
         const id = response.session.mid;
         // eslint-disable-next-line no-undef
-        VK.Api.call('users.get', { uids: id, fields: 'first_name,last_name,sex,city' }, r => {
+        VK.Api.call('users.get', { fields: 'first_name,last_name,sex,city' }, r => {
             if (r) {
                 // alert(r.response[0].sex);
                 // eslint-disable-next-line no-console
