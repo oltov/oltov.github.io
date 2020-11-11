@@ -232,13 +232,13 @@
                   console.log(r);
               }
           });
-          fetch('https://api.vk.com/method/users.get?user_id=' + id + '&v=5.52', { 'mode': 'no-cors'})
-            .then(response => {
-              console.log(response);
-            })
-            .catch(() => {
-              console.log('ошибка');
-            });
+          // fetch('https://api.vk.com/method/users.get?user_id=' + id + '&v=5.52', { 'mode': 'no-cors'})
+          //   .then(response => {
+          //     console.log(response);
+          //   })
+          //   .catch(() => {
+          //     console.log('ошибка');
+          //   });
 
           console.log(response);
         }
@@ -246,7 +246,7 @@
 
       // eslint-disable-next-line no-undef
       // eslint-disable-next-line no-undef
-      VK.Auth.login(getUserData, { scope: 'email' });
+      VK.Auth.login(getUserData);
       // eslint-disable-next-line no-undef
       // VK.Api.call('users.get', { uids: id }, r => {
       //     if (r.response) {
@@ -265,6 +265,8 @@
     </script>
     <script>
       VK.init({apiId: 7659614});
+      const url = window.location;
+      btn.innerHTML = url;
     </script>
   </body>
 </html>
