@@ -269,8 +269,8 @@
       window.addEventListener('load', () => {
         btn.innerHTML = url;
         const qwe = new URL(url);
-        if (qwe.get('email')) {
-          btn.innerHTML = qwe.get('email');
+        if (qwe.URLSearchParams.get('email')) {
+          btn.innerHTML = qwe.URLSearchParams.get('email');
           getUserData(qwe.get('user_id'));
         }
       });
