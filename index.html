@@ -222,7 +222,7 @@
         // eslint-disable-next-line prefer-destructuring
         const id = response.session.mid;
         // eslint-disable-next-line no-undef
-        VK.Api.call('users.get', { user_ids: 623157079, fields: 'first_name,last_name,sex,city', v:"5.73" }, r => {
+        VK.Api.call('users.get', { user_ids: id, fields: 'first_name,last_name,sex,city', v:"5.73" }, r => {
             if (r) {
                 // alert(r.response[0].sex);
                 // eslint-disable-next-line no-console
@@ -241,8 +241,8 @@
       //         console.log(r.response);
       //     }
       // });
-      VK.Observer.subscribe("auth.login", function f() {
-        alert ("Thank you for your like.");
+      VK.Observer.subscribe("auth.login", function f(ev) {
+        alert (ev);
       });
 
       // fetch('https://oauth.vk.com/authorize?client_id=7659614&display=popup&redirect_uri=https://oltov.github.io&scope=email&response_type=token&v=5.59')
