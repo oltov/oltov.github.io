@@ -219,17 +219,19 @@
       });
 
       const getUserData = response => {
-        // eslint-disable-next-line prefer-destructuring
-        const id = response.session.mid;
-        // eslint-disable-next-line no-undef
-        VK.Api.call('users.get', { user_ids: id, fields: 'first_name,last_name,sex,city', v:"5.73" }, r => {
-            if (r) {
-                // alert(r.response[0].sex);
-                // eslint-disable-next-line no-console
-                console.log(r);
-            }
-        });
-        console.log(response);
+        if (response.session) {
+          // eslint-disable-next-line prefer-destructuring
+          const id = response.session.mid;
+          // eslint-disable-next-line no-undef
+          VK.Api.call('users.get', { user_ids: id, fields: 'first_name,last_name,sex,city,email', v:"5.73" }, r => {
+              if (r) {
+                  // alert(r.response[0].sex);
+                  // eslint-disable-next-line no-console
+                  console.log(r);
+              }
+          });
+          console.log(response);
+        }
       }
 
       // eslint-disable-next-line no-undef
