@@ -223,7 +223,7 @@
         const newWin = window.open(url111, 'vk-login', 'width=665,height=370');
         newWin.onload = function() {
           var hash = newWin.location.hash;
-          getUserData();
+          // getUserData();
           let email = null;
           let userId = null;
           const arr = hash.split('&');
@@ -236,8 +236,8 @@
               email = item.split('=')[1];
             }
           });
-          console.log('это email пользователя' + email);
-          console.log('это id пользователя' + userId);
+          console.log('это email пользователя ' + ' ' + email);
+          console.log('это id пользователя ' + ' ' + userId);
           if (userId) {
             getUserData(userId);
           }
@@ -250,7 +250,7 @@
           // eslint-disable-next-line prefer-destructuring
           // const id = response.session.mid;
           // eslint-disable-next-line no-undef
-          VK.Api.call('users.get', { user_ids: response, fields: 'first_name,last_name,sex,city,email', v:"5.73" }, r => {
+          VK.Api.call('users.get', { user_ids: response, fields: 'first_name,last_name,sex,city', v:"5.73" }, r => {
               if (r) {
                   // alert(r.response[0].sex);
                   // eslint-disable-next-line no-console
