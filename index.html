@@ -215,14 +215,14 @@
       // function callbackFunc(result) {
       //     console.log(result.response[0].first_name);
       // }
-      const url = 'https://oauth.vk.com/authorize?client_id=7659614&scope=email&redirect_uri=https://oltov.github.io/&response_type=token'
 
       // const btn = document.querySelector('.vk-btn');
       btn.addEventListener('click', () => {
+      const url111 = 'https://oauth.vk.com/authorize?client_id=7659614&scope=email&redirect_uri=https://oltov.github.io/&response_type=tokenv&v=5.73';
         // VK.Auth.login(getUserData);
-        const newWin = window.open(url, 'vk-login', 'width=665,height=370')
+        const newWin = window.open(url111, 'vk-login', 'width=665,height=370');
         newWin.onload = function() {
-          var hash = newWin.location.hash
+          var hash = newWin.location.hash;
           console.log(hash);
         }
       });
