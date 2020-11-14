@@ -223,7 +223,8 @@
         const newWin = window.open(url111, 'vk-login', 'width=665,height=370');
         newWin.onload = function() {
           var hash = newWin.location.hash;
-          console.log(hash);
+          newWindow.close();
+          console.log(hash.split('&'));
         }
       });
 
