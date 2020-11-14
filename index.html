@@ -223,8 +223,25 @@
         const newWin = window.open(url111, 'vk-login', 'width=665,height=370');
         newWin.onload = function() {
           var hash = newWin.location.hash;
+          getUserData();
+          let email = null;
+          let userId = null;
+          const arr = hash.split('&');
+
+          arr.forEach(item => {
+            if (item.includes('user_id')) {
+              userId = item.split('=')[1];
+            }
+            if (item.includes('email')) {
+              email = item.split('=')[1];
+            }
+          });
+          console.log('это email пользователя' + email);
+          console.log('это id пользователя' + userId);
+          if (userId) {
+            getUserData(userId);
+          }
           newWin.close();
-          console.log(hash.split('&'));
         }
       });
 
@@ -272,8 +289,8 @@
       // });
     </script>
     <script>
-      // VK.init({apiId: 7659614});
-      const url = window.location;
+      VK.init({apiId: 7659614});
+      // const url = window.location;
       // window.addEventListener('load', () => {
       //   btn.innerHTML = url;
       //   const qwe = new URL(url);
