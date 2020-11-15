@@ -216,7 +216,7 @@
         userGender: '',
       };
       const getUserData = response => {
-          VK.Api.call('users.get', { user_ids: response, fields: 'first_name,last_name,sex,city', v:"5.73" }, r => {
+          VK.Api.call('users.get', { user_ids: response, v: "5.73" }, r => {
               if (r) {
                   console.log(r.response[0]);
                   userData.userName = r.response[0].first_name;
