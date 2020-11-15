@@ -224,7 +224,7 @@
 
       const btn = document.querySelector('.vk-btn');
       btn.addEventListener('click', () => {
-        VK.Auth.login(getUserData, { scope: email });
+        VK.Auth.login(getUserData, { scope: 'email' });
       })
       const userData = {
         email: '',
