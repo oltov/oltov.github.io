@@ -212,7 +212,7 @@
           VK.Api.call('users.get', { user_ids: response, fields: 'first_name,last_name,sex,city', v:"5.73" }, r => {
               if (r) {
                   console.log(r);
-                  window.location.href = window.location.origin;
+                  // window.location.href = window.location.origin; убираем hash из адресной строки
                   // тут запрос на бэк авторизацию
               }
           });
