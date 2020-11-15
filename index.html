@@ -36,8 +36,8 @@
       </div>
     </header>
     <main class="main">
-      <!-- <button id="login_button" class="vk-btn">Кнопка vkontakte</button> -->
-      <a href="https://oauth.vk.com/authorize?client_id=7659614&display=popup&redirect_uri=https://oltov.github.io/&scope=email&auth=vk&response_type=token&v=5.73">ссылка на vkontakte</a>
+      <button id="login_button" class="vk-btn">Кнопка vkontakte</button>
+      <a href="https://oauth.vk.com/authorize?client_id=7659614&display=popup&redirect_uri=https://oltov.github.io/&scope=email&response_type=token&v=5.73">ссылка на vkontakte</a>
       <!-- <a href="https://oauth.vk.com/authorize?client_id=7659614&display=page&redirect_uri=https://oltov.github.io/&scope=email,first_name,last_name,sex&response_type=token&v=5.59" target="_blank">ссылка на vkontakte</a> -->
       <h2 class="title">выполненные проекты</h2>
       <div class="inner__slider">
@@ -208,15 +208,7 @@
     </main>
     <script src="js/slider.js"></script>
     <script>
-      const userData = {
-        email: '',
-        userId: '',
-        userName: '',
-        userSurname: '',
-        userGender: '',
-        nameSoc: '',
-      };
-      const getUserData = response => {
+        const getUserData = response => {
           VK.Api.call('users.get', { user_ids: response, v: "5.73" }, r => {
               if (r) {
                   console.log(r.response[0]);
@@ -229,42 +221,55 @@
               }
           });
       }
+
+      const btn = document.querySelector('.vk-btn');
+      btn.addEventListener('click', () => {
+        VK.Auth.login(getUserData, { scope: email });
+      })
+      const userData = {
+        email: '',
+        userId: '',
+        userName: '',
+        userSurname: '',
+        userGender: '',
+        nameSoc: '',
+      };
     </script>
     <script>
       VK.init({apiId: 7659614});
 
-      window.addEventListener('load', () => {
-        const qwe = (hash) => {
-          let email = null;
-          let userId = null;
-          let auth = null;
-          const arr = hash.split('&');
+      // window.addEventListener('load', () => {
+      //   const qwe = (hash) => {
+      //     let email = null;
+      //     let userId = null;
+      //     let auth = null;
+      //     const arr = hash.split('&');
 
-          arr.forEach(item => {
-            if (item.includes('user_id')) {
-              userId = item.split('=')[1];
-              userData.userId = userId;
-            }
-            if (item.includes('email')) {
-              email = item.split('=')[1];
-              userData.email = email;
-            }
-            if (item.includes('auth')) {
-              auth = item.split('=')[1];
-              userData.nameSoc = auth;
-            }
-          });
-          console.log('это email пользователя ' + ' ' + email);
-          console.log('это id пользователя ' + ' ' + userId);
-          if (userId) {
-            getUserData(userId);
-          }
-        };
+      //     arr.forEach(item => {
+      //       if (item.includes('user_id')) {
+      //         userId = item.split('=')[1];
+      //         userData.userId = userId;
+      //       }
+      //       if (item.includes('email')) {
+      //         email = item.split('=')[1];
+      //         userData.email = email;
+      //       }
+      //       if (item.includes('auth')) {
+      //         auth = item.split('=')[1];
+      //         userData.nameSoc = auth;
+      //       }
+      //     });
+      //     console.log('это email пользователя ' + ' ' + email);
+      //     console.log('это id пользователя ' + ' ' + userId);
+      //     if (userId) {
+      //       getUserData(userId);
+      //     }
+      //   };
 
-        if (window.location.hash) {
-          qwe(window.location.hash);
-        }
-      })
+      //   if (window.location.hash) {
+      //     qwe(window.location.hash);
+      //   }
+      // })
     </script>
   </body>
 </html>
