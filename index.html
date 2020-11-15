@@ -209,17 +209,18 @@
     <script src="js/slider.js"></script>
     <script>
         const getUserData = response => {
-          VK.Api.call('users.get', { user_ids: response, v: "5.73" }, r => {
-              if (r) {
-                  console.log(r.response[0]);
-                  userData.userName = r.response[0].first_name;
-                  userData.userSurname = r.response[0].last_name;
-                  userData.userGender = r.response[0].sex;
-                  // window.location.href = window.location.origin; убираем hash из адресной строки
-                  // тут запрос на бэк авторизацию
-                  console.dir(userData);
-              }
-          });
+          // VK.Api.call('users.get', { user_ids: response, v: "5.73" }, r => {
+          //     if (r) {
+          //         console.log(r.response[0]);
+          //         userData.userName = r.response[0].first_name;
+          //         userData.userSurname = r.response[0].last_name;
+          //         userData.userGender = r.response[0].sex;
+          //         // window.location.href = window.location.origin; убираем hash из адресной строки
+          //         // тут запрос на бэк авторизацию
+          //         console.dir(userData);
+          //     }
+          // });
+          console.log(response);
       }
 
       const btn = document.querySelector('.vk-btn');
