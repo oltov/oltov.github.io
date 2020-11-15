@@ -218,10 +218,10 @@
       const getUserData = response => {
           VK.Api.call('users.get', { user_ids: response, fields: 'first_name,last_name,sex,city', v:"5.73" }, r => {
               if (r) {
-                  console.log(r[0]);
-                  userData.userName = r[0].first_name;
-                  userData.userSurname = r[0].last_name;
-                  userData.userGender = r[0].sex;
+                  console.log(r);
+                  // userData.userName = r[0].first_name;
+                  // userData.userSurname = r[0].last_name;
+                  // userData.userGender = r[0].sex;
                   // window.location.href = window.location.origin; убираем hash из адресной строки
                   // тут запрос на бэк авторизацию
                   console.dir(userData);
@@ -233,8 +233,6 @@
       VK.init({apiId: 7659614});
 
       window.addEventListener('load', () => {
-        console.log('первая загрузка ', window.location);
-
         const qwe = (hash) => {
           let email = null;
           let userId = null;
