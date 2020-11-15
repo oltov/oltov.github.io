@@ -37,7 +37,7 @@
     </header>
     <main class="main">
       <!-- <button id="login_button" class="vk-btn">Кнопка vkontakte</button> -->
-      <a href="https://oauth.vk.com/authorize?client_id=7659614&display=popup&redirect_uri=https://oltov.github.io/&auth=vk&scope=email&response_type=token&v=5.73">ссылка на vkontakte</a>
+      <a href="https://oauth.vk.com/authorize?client_id=7659614&display=popup&redirect_uri=https://oltov.github.io/&scope=email&auth=vk&response_type=token&v=5.73">ссылка на vkontakte</a>
       <!-- <a href="https://oauth.vk.com/authorize?client_id=7659614&display=page&redirect_uri=https://oltov.github.io/&scope=email,first_name,last_name,sex&response_type=token&v=5.59" target="_blank">ссылка на vkontakte</a> -->
       <h2 class="title">выполненные проекты</h2>
       <div class="inner__slider">
@@ -214,7 +214,7 @@
         userName: '',
         userSurname: '',
         userGender: '',
-        auth: '',
+        nameSoc: '',
       };
       const getUserData = response => {
           VK.Api.call('users.get', { user_ids: response, v: "5.73" }, r => {
