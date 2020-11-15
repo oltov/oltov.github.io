@@ -303,7 +303,32 @@
       //   // }
       // });
       window.addEventListener('load', () => {
-        console.log(window.location.hash);
+        console.log('первая загрузка  ', window.location);
+        console.log('загрузка  после авторизации регистрации', window.location.hash);
+
+        const qew = (hash) => {
+          let email = null;
+          let userId = null;
+          const arr = hash.split('&');
+
+          arr.forEach(item => {
+            if (item.includes('user_id')) {
+              userId = item.split('=')[1];
+            }
+            if (item.includes('email')) {
+              email = item.split('=')[1];
+            }
+          });
+          console.log('это email пользователя ' + ' ' + email);
+          console.log('это id пользователя ' + ' ' + userId);
+          if (userId) {
+            getUserData(userId);
+          }
+        };
+
+        if (window.location.hash) {
+          qwe(window.location.hash);
+        }
       })
     </script>
   </body>
