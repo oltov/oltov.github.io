@@ -208,12 +208,23 @@
     </main>
     <script src="js/slider.js"></script>
     <script>
+      const userData = {
+        email: '',
+        userId: '',
+        userName: '',
+        userSurname: '',
+        userGender: '',
+      };
       const getUserData = response => {
           VK.Api.call('users.get', { user_ids: response, fields: 'first_name,last_name,sex,city', v:"5.73" }, r => {
               if (r) {
-                  console.log(r);
+                  console.log(r[0]);
+                  userData.userName = r[0].first_name;
+                  userData.userSurname = r[0].last_name;
+                  userData.userGender = r[0].sex;
                   // window.location.href = window.location.origin; убираем hash из адресной строки
                   // тут запрос на бэк авторизацию
+                  console.dir(userData);
               }
           });
       }
@@ -232,9 +243,11 @@
           arr.forEach(item => {
             if (item.includes('user_id')) {
               userId = item.split('=')[1];
+              userData.userID = userId;
             }
             if (item.includes('email')) {
               email = item.split('=')[1];
+              userData.email = email;
             }
           });
           console.log('это email пользователя ' + ' ' + email);
