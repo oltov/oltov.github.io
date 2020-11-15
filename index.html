@@ -212,12 +212,12 @@
           VK.Api.call('account.getProfileInfo', { user_ids: response.session.mid, v: "5.73" }, r => {
               if (r) {
                   console.log(r.response);
-                  userData.userName = r.response[0].first_name;
-                  userData.userSurname = r.response[0].last_name;
-                  userData.userGender = r.response[0].sex;
+                  // userData.userName = r.response[0].first_name;
+                  // userData.userSurname = r.response[0].last_name;
+                  // userData.userGender = r.response[0].sex;
                   // window.location.href = window.location.origin; убираем hash из адресной строки
                   // тут запрос на бэк авторизацию
-                  console.dir(userData);
+                  // console.dir(userData);
               }
           });
           console.log(response);
