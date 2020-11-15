@@ -211,7 +211,7 @@
         const getUserData = response => {
           VK.Api.call('account.getProfileInfo', { user_ids: response.session.mid, v: "5.73" }, r => {
               if (r) {
-                  console.log(r.response);
+                  console.log(r);
                   // userData.userName = r.response[0].first_name;
                   // userData.userSurname = r.response[0].last_name;
                   // userData.userGender = r.response[0].sex;
@@ -220,7 +220,7 @@
                   // console.dir(userData);
               }
           });
-          console.log(response);
+          console.log('ответ после авторизации ' + response);
       }
 
       const btn = document.querySelector('.vk-btn');
