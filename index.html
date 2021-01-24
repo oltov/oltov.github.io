@@ -7,10 +7,21 @@
     <link href="css/style-min.css" rel="stylesheet">
     <link rel="preload" href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap&subset=cyrillic,cyrillic-ext" rel="stylesheet" as="font">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link href="https://vjs.zencdn.net/7.10.2/video-js.css" rel="stylesheet" />
     <script src="https://vk.com/js/api/openapi.js?168"></script>
     <script src="https://connect.facebook.net/en_US/sdk.js"></script>
   </head>
   <body class="body">
+    <div class="affinage-10">
+      <h1 class="affinage-10-pre-wrapper__item"></h1>
+       <ul class="affinage-10__popup">
+        <li class="affinage-10__popup affinage-10-pre-wrapper__item">0</li>
+           <li class="affinage-10 affinage-10__popup affinage-10-pre-wrapper__item">1</li>
+          <li class="affinage-10 affinage-10__popup affinage-10-pre-wrapper__item">2</li>
+          <li class="affinage-10 affinage-10__popup affinage-10-pre-wrapper__item">3</li>
+          <li class="affinage-10__popup">4</li>
+       </ul>
+  </div
     <header class="header">
       <div class="header-wrapper container">
         <picture class="picture">
@@ -37,9 +48,6 @@
       </div>
     </header>
     <main class="main">
-      <button id="login_button" class="vk-btn">Кнопка vkontakte</button>
-      <a href="https://oauth.vk.com/authorize?client_id=7659614&display=popup&redirect_uri=https://oltov.github.io/&scope=email&response_type=token&v=5.73">ссылка на vkontakte</a>
-      <!-- <a href="https://oauth.vk.com/authorize?client_id=7659614&display=page&redirect_uri=https://oltov.github.io/&scope=email,first_name,last_name,sex&response_type=token&v=5.59" target="_blank">ссылка на vkontakte</a> -->
       <h2 class="title">выполненные проекты</h2>
       <div class="inner__slider">
         <div class="slider__wrapper">
@@ -224,7 +232,7 @@
           VK.Api.call('https://oauth.vk.com/authorize?client_id=7659614&display=popup&redirect_uri=https://oltov.github.io/&scope=email&response_type=token&v=5.73', r => {
             console.dir(r);
           });
-          console.dir(response);
+          // console.dir(response);
       }
 
       const btn = document.querySelector('.vk-btn');
